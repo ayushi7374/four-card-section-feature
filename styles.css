@@ -72,7 +72,7 @@ header > p {
 }
 header > h1 {
   font-weight: 200;
-  font-size: 1.5em;
+  font-size: 1.7em;
   line-height: 150%;
   text-align: center;
 }
@@ -81,4 +81,44 @@ header > h1 {
   font-size: 1em;
   color: var(--dark-text);
   line-height: 150%;
+}
+@media screen and (min-width: 1440px) {
+  body {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    max-width: 1000px;
+  }
+  .supervisor {
+    grid-column: 1;
+    grid-row: 1;
+    transform: translateY(50%);
+  }
+  .team-builder {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .calculator {
+    grid-column: 3;
+    grid-row: 1;
+    transform: translateY(50%);
+  }
+
+  .karma {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  header > h1 {
+    font-size: 2em;
+  }
+  header > p {
+    max-width: 500px;
+  }
 }
